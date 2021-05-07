@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Ubuntu:wght@500&display=swap");
+
+:root {
+  /* Colores */
+  --color-uno: #1b1b1b;
+  --color-dos: #272727;
+  --color-tres: #0e0e0e;
+  --color-cuatro: #5fdaff;
+  --borde-timeline: #ffffff;
+  --letra-default: #f0f0f0;  
+
+  /* Tamaño de letra */
+  --font-size-principal: 14.5px;
+}
+
+/* Estilos Generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-principal);
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    0deg,
+    var(--color-dos) 60%,
+    var(--color-uno) 60.1%
+  );
+  font-family: "Open Sans", sans-serif;
+  color: var(--letra-default);
+}
+
+/* Estilos del Main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 92vh;
+  margin: auto;
+}
+
+h1 {
+  margin: 3rem 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 100;
+  font-size: 3.8rem;
+  color: var(--color-cuatro);
+}
+
+/* Contenido Principal */
+.contenido-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-principal .figura-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.contenido-principal .figura-principal img {
+  height: 18rem;
+  width: 18rem;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px 0px var(--color-tres);
+  -webkit-box-shadow: 0px 0px 5px 0px var(--color-tres);
+}
+
+.contenido-principal .figura-principal figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.contenido-principal p {
+  width: 30%;
+  margin-left: 2.5rem;
+  font-size: 1.2rem;
+}
+
+.contenido-principal p .nombre {
+  font-weight: 600;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 4.5rem;
+}
+
+.timeline ul {
+  border-top: 2px var(--borde-timeline) solid;
+  display: flex;
+}
+
+.timeline ul li::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: -14%;
+  left: 40%;
+  background-color: var(--color-cuatro);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+}
+
+.timeline ul li:hover::before {
+  list-style: none;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.timeline ul li {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  min-height: 100px;
+  padding: 10px;
+  margin: 10px 15px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.timeline ul li:hover time {
+  color: var(--color-cuatro);
+}
+
+.timeline ul li time {
+  font-size: 1.15rem;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+}
+
+.timeline ul li p {
+  margin-top: 0.5rem;
+}
+
+/* Estilos del Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 8vh;
+  background-color: var(--color-tres);
+}
